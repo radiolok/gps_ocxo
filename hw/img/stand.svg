@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" role="img">
+  <title>DOROGO: стенд платы №1</title>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8c959f"/></marker></defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="28" y="38" text-anchor="start" font-size="17" font-weight="700" fill="#1f2328">Стенд платы №1: антенна и приборы общие на два экземпляра</text>
+  <text x="28" y="60" text-anchor="start" font-size="12.5" font-weight="400" fill="#57606a">Показан один стенд; второй получает второй выход сплиттера и второй канал Rigol</text>
+  <rect x="340.0" y="120.0" width="220" height="400" rx="8" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
+  <text x="450" y="287.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Плата №1</text>
+  <text x="450" y="304.0" text-anchor="middle" font-size="11.5" fill="#57606a">× 2 идентичных стенда</text>
+  <text x="450" y="319.0" text-anchor="middle" font-size="11.5" fill="#57606a"></text>
+  <text x="450" y="334.0" text-anchor="middle" font-size="11.5" fill="#57606a">доработки 1 и 10</text>
+  <text x="450" y="349.0" text-anchor="middle" font-size="11.5" fill="#57606a">R15 пока на месте</text>
+  <text x="450" y="364.0" text-anchor="middle" font-size="11.5" fill="#57606a">без платы питания</text>
+  <rect x="40.0" y="115.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="150" y="139.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Антенна L1/L2</text>
+  <text x="150" y="156.5" text-anchor="middle" font-size="11.5" fill="#57606a">активный сплиттер 1:2</text>
+  <text x="150" y="171.5" text-anchor="middle" font-size="11.5" fill="#57606a">второй выход → стенд B</text>
+  <path d="M260 150 L340 150" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="300.0" y="142" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">ANT</text>
+  <rect x="40.0" y="285.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="150" y="309.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ЛБП 3,3 В, 0,5 А</text>
+  <text x="150" y="326.5" text-anchor="middle" font-size="11.5" fill="#57606a">X2: 13–14 +3V3</text>
+  <text x="150" y="341.5" text-anchor="middle" font-size="11.5" fill="#57606a">X2: 17–18 GND</text>
+  <path d="M260 320 L340 320" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="300.0" y="312" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">X2</text>
+  <rect x="40.0" y="455.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="150" y="479.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Rigol DG1022</text>
+  <text x="150" y="496.5" text-anchor="middle" font-size="11.5" fill="#57606a">CH1 25 МГц → стенд A</text>
+  <text x="150" y="511.5" text-anchor="middle" font-size="11.5" fill="#57606a">CH2 → стенд B</text>
+  <path d="M260 490 L340 490" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="300.0" y="482" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">25MHz</text>
+  <rect x="640.0" y="115.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="750" y="139.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Коммутатор + ПК</text>
+  <text x="750" y="156.5" text-anchor="middle" font-size="11.5" fill="#57606a">PTP / NTP</text>
+  <text x="750" y="171.5" text-anchor="middle" font-size="11.5" fill="#57606a">сервер образов</text>
+  <path d="M560 150 L640 150" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="600.0" y="142" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">RJ45</text>
+  <rect x="640.0" y="225.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="750" y="249.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ПК по USB</text>
+  <text x="750" y="266.5" text-anchor="middle" font-size="11.5" fill="#57606a">USB-B: shell STM32</text>
+  <text x="750" y="281.5" text-anchor="middle" font-size="11.5" fill="#57606a">micro-USB: u-center</text>
+  <path d="M560 260 L640 260" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="600.0" y="252" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">USB × 2</text>
+  <rect x="640.0" y="345.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="750" y="369.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ST-LINK V3</text>
+  <text x="750" y="386.5" text-anchor="middle" font-size="11.5" fill="#57606a">SWD, SWO, nRESET</text>
+  <text x="750" y="401.5" text-anchor="middle" font-size="11.5" fill="#57606a">через переходник X1</text>
+  <path d="M560 380 L640 380" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="600.0" y="372" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">X1</text>
+  <rect x="640.0" y="455.0" width="220" height="70" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="750" y="479.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Анализатор / TIC</text>
+  <text x="750" y="496.5" text-anchor="middle" font-size="11.5" fill="#57606a">трасса ETM, PPS A и B</text>
+  <text x="750" y="511.5" text-anchor="middle" font-size="11.5" fill="#57606a">SLogic16U3 · Hantek 4032L</text>
+  <path d="M560 490 L640 490" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="600.0" y="482" text-anchor="middle" font-size="11.5" font-weight="400" fill="#57606a">PPS, трасса</text>
+</svg>

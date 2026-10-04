@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" role="img">
+  <title>DOROGO: системная архитектура</title>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8c959f"/></marker></defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="28" y="38" text-anchor="start" font-size="17" font-weight="700" fill="#1f2328">AD9545 дисциплинирует все выходы по GNSS PPS, OCXO бежит свободно</text>
+  <text x="28" y="60" text-anchor="start" font-size="12.5" font-weight="400" fill="#57606a">Две платы, одна петля частоты; STM32 подводит только фазу PHC</text>
+  <rect x="28" y="92" width="844" height="216" rx="10" fill="none" stroke="#afb8c1" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="856" y="116" text-anchor="end" font-size="13" font-weight="600" fill="#57606a">Плата №1 — MCU + ETH + GNSS</text>
+  <rect x="28" y="356" width="844" height="236" rx="10" fill="none" stroke="#afb8c1" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="856" y="380" text-anchor="end" font-size="13" font-weight="600" fill="#57606a">Плата №2 — OCXO + AD9545 + выходы</text>
+  <rect x="45.0" y="129.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="160" y="157.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ZED-F9T</text>
+  <text x="160" y="174.0" text-anchor="middle" font-size="11.5" fill="#57606a">PPS + qErr по UBX</text>
+  <rect x="335.0" y="129.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="450" y="157.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">TIM2, захват</text>
+  <text x="450" y="174.0" text-anchor="middle" font-size="11.5" fill="#57606a">GNSS PPS против метки PHC</text>
+  <rect x="625.0" y="129.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="740" y="157.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">phc_servo</text>
+  <text x="740" y="174.0" text-anchor="middle" font-size="11.5" fill="#57606a">только фаза PHC (addend)</text>
+  <rect x="45.0" y="231.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="160" y="259.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Тактирование</text>
+  <text x="160" y="276.0" text-anchor="middle" font-size="11.5" fill="#57606a">HSE 25 МГц (PH0), LMK1C1102</text>
+  <rect x="335.0" y="231.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="450" y="259.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">PHC в MAC STM32</text>
+  <text x="450" y="276.0" text-anchor="middle" font-size="11.5" fill="#57606a">PTP GM, NTP, индикатор</text>
+  <rect x="625.0" y="231.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="740" y="259.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ad9545_ctl</text>
+  <text x="740" y="276.0" text-anchor="middle" font-size="11.5" fill="#57606a">SPI3: профиль, статус, FTW</text>
+  <rect x="45.0" y="399.0" width="230" height="62" rx="8" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
+  <text x="160" y="427.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">AD9545</text>
+  <text x="160" y="444.0" text-anchor="middle" font-size="11.5" fill="#57606a">DPLL по PPS, sysclk от OCXO</text>
+  <rect x="335.0" y="399.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="450" y="427.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">OCXO 10 МГц</text>
+  <text x="450" y="444.0" text-anchor="middle" font-size="11.5" fill="#57606a">TCO-6920N, свободный ход</text>
+  <rect x="625.0" y="399.0" width="230" height="62" rx="8" fill="#fff8c5" stroke="#bf8700" stroke-width="1.6"/>
+  <text x="740" y="427.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">EFC</text>
+  <text x="740" y="444.0" text-anchor="middle" font-size="11.5" fill="#57606a">опора + подстроечник, вручную</text>
+  <rect x="45.0" y="503.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="160" y="531.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Цифровые выходы</text>
+  <text x="160" y="548.0" text-anchor="middle" font-size="11.5" fill="#57606a">25 МГц, 2 × TTL, PPS</text>
+  <rect x="335.0" y="503.0" width="230" height="62" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="450" y="531.0" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Синусные выходы</text>
+  <text x="450" y="548.0" text-anchor="middle" font-size="11.5" fill="#57606a">10 / 5 / 1 МГц, ФНЧ, 50 Ом</text>
+  <path d="M275.0 160 L335.0 160" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M565.0 160 L625.0 160" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M680 191.0 L680 212 L510 212 L510 231.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M450 231.0 L450 191.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="458" y="216" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">ITR1</text>
+  <path d="M275.0 262 L335.0 262" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M63.0 191.0 L63.0 399.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="71.0" y="336" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">PPS → REF</text>
+  <path d="M740 293.0 L740 338 L230 338 L230 399.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="748" y="330" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">SPI3</text>
+  <path d="M180 399.0 L180 293.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="188" y="318" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">25 МГц</text>
+  <path d="M335.0 430 L275.0 430" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="285.0" y="422" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">sysclk</text>
+  <path d="M625.0 430 L565.0 430" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <path d="M160 461.0 L160 503.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M240 461.0 L240 486 L450 486 L450 503.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+</svg>

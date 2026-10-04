@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="660" viewBox="0 0 940 660" font-family="Inter, 'Segoe UI', 'DejaVu Sans', Arial, sans-serif" role="img">
+  <title>DOROGO: структура ПО на Zephyr</title>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8c959f"/></marker></defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="28" y="38" text-anchor="start" font-size="17" font-weight="700" fill="#1f2328">Все потоки времени сходятся в timekeeper</text>
+  <text x="28" y="60" text-anchor="start" font-size="12.5" font-weight="400" fill="#57606a">Сверху вниз: сервисы · ядро времени · драйверы и ISR · периферия и выводы</text>
+  <rect x="30.0" y="92.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="110" y="119.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">log + settings</text>
+  <text x="110" y="136.5" text-anchor="middle" font-size="11.5" fill="#57606a">FTW, TE, температура</text>
+  <text x="110" y="151.5" text-anchor="middle" font-size="11.5" fill="#57606a">NVS</text>
+  <rect x="210.0" y="92.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="290" y="119.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ptp_gm</text>
+  <text x="290" y="136.5" text-anchor="middle" font-size="11.5" fill="#57606a">G.8275.1, L2</text>
+  <text x="290" y="151.5" text-anchor="middle" font-size="11.5" fill="#57606a">clockClass</text>
+  <rect x="390.0" y="92.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="470" y="119.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ntp_srv + http_srv</text>
+  <text x="470" y="136.5" text-anchor="middle" font-size="11.5" fill="#57606a">UDP 123, HTTP</text>
+  <text x="470" y="151.5" text-anchor="middle" font-size="11.5" fill="#57606a">/api/status, /metrics</text>
+  <rect x="570.0" y="92.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="650" y="119.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">fw_update</text>
+  <text x="650" y="136.5" text-anchor="middle" font-size="11.5" fill="#57606a">MCUboot, слот 2</text>
+  <text x="650" y="151.5" text-anchor="middle" font-size="11.5" fill="#57606a">по Ethernet</text>
+  <rect x="750.0" y="92.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="830" y="119.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ui + shell + devcfg</text>
+  <text x="830" y="136.5" text-anchor="middle" font-size="11.5" fill="#57606a">индикатор, меню</text>
+  <text x="830" y="151.5" text-anchor="middle" font-size="11.5" fill="#57606a">USB CDC, Telnet</text>
+  <rect x="30.0" y="232.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="110" y="259.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">gnss_ubx</text>
+  <text x="110" y="276.5" text-anchor="middle" font-size="11.5" fill="#57606a">UTC, leap, qErr</text>
+  <text x="110" y="291.5" text-anchor="middle" font-size="11.5" fill="#57606a">TIM-TP, NAV-*</text>
+  <rect x="210.0" y="232.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="290" y="259.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">phc_servo</text>
+  <text x="290" y="276.5" text-anchor="middle" font-size="11.5" fill="#57606a">фаза PHC</text>
+  <text x="290" y="291.5" text-anchor="middle" font-size="11.5" fill="#57606a">step, addend</text>
+  <rect x="390.0" y="232.0" width="160" height="76" rx="8" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
+  <text x="470" y="259.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">timekeeper</text>
+  <text x="470" y="276.5" text-anchor="middle" font-size="11.5" fill="#57606a">TAI, UTC-offset</text>
+  <text x="470" y="291.5" text-anchor="middle" font-size="11.5" fill="#57606a">единое время</text>
+  <rect x="570.0" y="232.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="650" y="259.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ad9545_ctl</text>
+  <text x="650" y="276.5" text-anchor="middle" font-size="11.5" fill="#57606a">профиль, статус</text>
+  <text x="650" y="291.5" text-anchor="middle" font-size="11.5" fill="#57606a">FTW раз в 1 с</text>
+  <rect x="30.0" y="372.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="110" y="399.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">USART1 + DMA</text>
+  <text x="110" y="416.5" text-anchor="middle" font-size="11.5" fill="#57606a">кольцевой буфер</text>
+  <text x="110" y="431.5" text-anchor="middle" font-size="11.5" fill="#57606a">парсер UBX</text>
+  <rect x="210.0" y="372.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="290" y="399.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">pps_capture</text>
+  <text x="290" y="416.5" text-anchor="middle" font-size="11.5" fill="#57606a">ISR TIM2</text>
+  <text x="290" y="431.5" text-anchor="middle" font-size="11.5" fill="#57606a">высший приоритет</text>
+  <rect x="390.0" y="372.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="470" y="399.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ETH MAC + PHC</text>
+  <text x="470" y="416.5" text-anchor="middle" font-size="11.5" fill="#57606a">MII, метки 1588</text>
+  <text x="470" y="431.5" text-anchor="middle" font-size="11.5" fill="#57606a">PTP trigger</text>
+  <rect x="570.0" y="372.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="650" y="399.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">SPI3 + DMA</text>
+  <text x="650" y="416.5" text-anchor="middle" font-size="11.5" fill="#57606a">таблица регистров</text>
+  <text x="650" y="431.5" text-anchor="middle" font-size="11.5" fill="#57606a">ACE-профиль</text>
+  <rect x="750.0" y="372.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="830" y="399.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">USART2 + EXTI</text>
+  <text x="830" y="416.5" text-anchor="middle" font-size="11.5" fill="#57606a">кадр ИЛЦ по DMA</text>
+  <text x="830" y="431.5" text-anchor="middle" font-size="11.5" fill="#57606a">кнопки, USB CDC</text>
+  <rect x="30.0" y="522.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="110" y="549.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ZED-F9T</text>
+  <text x="110" y="566.5" text-anchor="middle" font-size="11.5" fill="#57606a">UART PB6/PB7</text>
+  <text x="110" y="581.5" text-anchor="middle" font-size="11.5" fill="#57606a">U.FL ANT</text>
+  <rect x="210.0" y="522.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="290" y="549.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">GNSS PPS</text>
+  <text x="290" y="566.5" text-anchor="middle" font-size="11.5" fill="#57606a">PA15 TIM2_CH1</text>
+  <text x="290" y="581.5" text-anchor="middle" font-size="11.5" fill="#57606a">ITR1: PHC</text>
+  <rect x="390.0" y="522.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="470" y="549.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">DP83640</text>
+  <text x="470" y="566.5" text-anchor="middle" font-size="11.5" fill="#57606a">MII, AF11</text>
+  <text x="470" y="581.5" text-anchor="middle" font-size="11.5" fill="#57606a">RST PB2</text>
+  <rect x="570.0" y="522.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="650" y="549.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">AD9545</text>
+  <text x="650" y="566.5" text-anchor="middle" font-size="11.5" fill="#57606a">SPI3 PC10–PC12</text>
+  <text x="650" y="581.5" text-anchor="middle" font-size="11.5" fill="#57606a">CS PA4, RST PC9</text>
+  <rect x="750.0" y="522.0" width="160" height="76" rx="8" fill="#ffffff" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="830" y="549.5" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Панель + USB</text>
+  <text x="830" y="566.5" text-anchor="middle" font-size="11.5" fill="#57606a">PD4–PD7, PD0–PD3</text>
+  <text x="830" y="581.5" text-anchor="middle" font-size="11.5" fill="#57606a">USB PA11/PA12</text>
+  <path d="M110 522.0 L110 448.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M290 522.0 L290 448.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M470 522.0 L470 448.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <path d="M650 522.0 L650 448.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <path d="M830 522.0 L830 448.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <path d="M110 372.0 L110 308.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M290 372.0 L290 308.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M470 372.0 L470 308.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <path d="M650 372.0 L650 308.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <path d="M830 372.0 L830 168.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <path d="M190.0 270 L210.0 270" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M370.0 270 L390.0 270" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M570.0 270 L550.0 270" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M330 308.0 L330 340 L430 340 L430 372.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="338" y="334" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">addend</text>
+  <path d="M390.0 430 L370.0 430" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="386.0" y="418" text-anchor="end" font-size="11.5" font-weight="400" fill="#57606a">ITR1</text>
+  <path d="M470 232.0 L470 200" fill="none" stroke="#8c959f" stroke-width="1.4"/>
+  <path d="M110 200 L800 200" fill="none" stroke="#8c959f" stroke-width="1.4"/>
+  <path d="M110 200 L110 168.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M290 200 L290 168.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M470 200 L470 168.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M800 200 L800 168.0" fill="none" stroke="#8c959f" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="580" y="194" text-anchor="start" font-size="11.5" font-weight="400" fill="#57606a">zbus: время и состояние</text>
+</svg>
